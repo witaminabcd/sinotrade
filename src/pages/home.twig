@@ -1,0 +1,29 @@
+{% extends '../assets/layout/base.twig' %}
+
+{% block top %}
+
+{% endblock %}
+
+{% block body %}
+
+    {% set title = 'Главная - home' %}
+    {% set meta_d = 'Описание' %}
+    {% set theme_color = '#FFFFFF' %}
+    {% set body_class = 'page' %}
+
+{#    <main>#}
+{#        <h1 class="visually-hidden">Заголовок</h1>#}
+
+    {% include '../components/banner/banner.twig' %}
+    {% include '../components/r-catalog/r-catalog.twig' %}
+
+
+
+
+
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

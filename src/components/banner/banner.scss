@@ -1,203 +1,96 @@
-.banner{
-  background: linear-gradient(180deg, #4A4A4A 0%, #525252 14.02%, #535353 23.67%, #515151 31.83%, #4D4D4C 43.15%, #484948 48.63%, #434343 55.98%, #414141 61.94%, #3D3D3D 66.93%, #383837 72.42%, #333333 78.82%, #2C2C2C 100%);
-  padding-bottom: 58px;
-  overflow:hidden;
-  .menu{
-    @include container();
-    position: relative;
-    ul{
-      top:20px;
-      position:absolute;
-      display: flex;
-      gap:3rem;
-      justify-content: flex-start;
-      padding-left: 0;
-      li{
-        text-decoration: none;
-        list-style-type: none;
-        color:white;
-      }
-    }
-  }
-
-  .banner-wrap{
-    @include container();
-    display:flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    height: 702px;
-    .banner-text{
-      width: 40%;
-      .banner-text-cont{
-        display: flex;
-        justify-content: space-between;
-        //display: inline-block;
-        .banner-subtitle{
-          width:50%;
-          //float:left;
-        }
-        .banner-button{
-          width: 242px!important;
-          height: 56px;
-          //padding: 13px 16px 13px 16px;
-          gap: 10px;
-          border-radius: 50px;
-          opacity: 0px;
-          background: rgba(174, 41, 92, 1);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          a{
-            text-decoration: none;
-            color:white;
-            font-family: Montserrat Alternates;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18.2px;
-            text-align: left;
-            //width: 100%;
-          }
-        }
-      }
-      .banner-title{
-        font-family: Montserrat;
-        font-size: 72px;
-        font-weight: 900;
-        line-height: 72px;
-        color: rgba(255, 255, 255, 1);
-
-      }
-      .banner-subtitle{
-        font-family: Montserrat;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 26px;
-        width: auto;
-        //text-align: left;
-        color:white;
-
-      }
-
-    }
-
-    .banner-name-img{
-      bottom: 46px;
-      z-index:1100;
-      width:100%;
-      font-family: Montserrat;
-      font-size: 166.86px;
-      font-weight: 900;
-      text-align: left;
-      position:absolute;
-      color: rgba(81, 121, 222, 1);
-      height: auto;
-      //img{
-      //  width: 100%;
-      //}
-    }
-    .banner-img{
-      position:absolute;
-      right: -50px;
-      //top: -150px;
-      bottom:58px;
-      height: 100%;
-    }
-  }
-
-  .banner-buttom{
-    height: 58px;
-    background-color:rgba(81, 121, 222, 1);
+.r-banner{
+  background-color: #202020;
+  position: relative;
+  overflow: hidden;
+  .r-header{
+    height: 100px;
+    background-color: #202020;
     z-index: 1000;
+  }
+  .r-header-wrap{
+    @include container();
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-content: center;
+
+  }
+  .r-header-menu{
+    display: flex;
+    align-items: center;
+  }
+  .r-header-logo{
+    display: flex;
+    align-content: center;
+    img{
+      max-width: 200px;
+    }
+  }
+  .r-header-menu ul{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    a{
+      color: white;
+    }
+  }
+  .r-banner-wrap{
+    @include container();
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+
+    //grid-auto-flow: column;
+  }
+  .r-banner-gradiend{
     position: absolute;
-    width: 100%;
-    .banner-buttom-wrap{
-      @include container();
-      display: flex;
-      align-items: center;
-      color:white;
-      font-family: Montserrat;
-      font-size: 40px;
-      font-weight: 800;
-      line-height: 52px;
-      text-align: left;
-      height: 100%;
-    }
+    left: -10%;
+    top: 0;
+    //z-index: 1000;
+    height: 75%;
+    width: 20%;
+    background: radial-gradient(50% 50% at 50% 50%, #CE0708 0%, #202020 100%);
+
   }
-}
-
-@media #{$mobile-only-two} {
-  .banner {
-    .menu{
-      display: none;
-    }
-    padding-bottom: 0;
-    .banner-wrap{
-      height: auto;
-      .banner-text {
-        width: 100%;
-        .banner-title{
-          font-family: Montserrat;
-          font-size: 37px;
-          font-weight: 900;
-          line-height: 37px;
-          text-align: left;
-
-        }
-        .banner-text-cont{
-          flex-direction: column;
-          gap:2rem;
-          position: relative;
-
-          .banner-subtitle{
-            width:70%;
-            position:absolute;
-            bottom:-30px;
-            font-family: Montserrat;
-            font-size: 14.45px;
-            font-weight: 600;
-            line-height: 18.79px;
-            text-align: left;
-
-          }
-          .banner-button{
-            position:absolute;
-            bottom:-100px;
-            width:164px!important;
-            height:56px;
-          }
-        }
-      }
-      .banner-name-img{
-        bottom: 7px;
-        width:100%;
-        font-family: Montserrat;
-        font-size: 51.68px;
-        font-weight: 900;
-        text-align: left;
-        color: rgba(81, 121, 222, 1);
-        height: auto;
-        //img{
-        //  width: 100%;
-        //}
-      }
-      .banner-img {
-        position: relative;
-        right: auto;
-        bottom:-5px;
-        width: 100%;
-        height: 100%;
-        img{
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-    }
-    .banner-buttom{
-      position:static;
-    }
+  .r-banner-cont{
+    display: grid;
+    align-content: center;
+    gap: 1rem;
   }
+  .r-banner-title{
+    font-family: Gilroy;
+    font-weight: 500;
+    font-size: 74px;
+    line-height: 100%;
+    letter-spacing: 0%;
 
+  }
+  .r-banner-subtitle{
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
 
+  }
+  .r-banner-btn{
+    background: linear-gradient(270deg, #CE0708 0%, #F62F30 100%);
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 306px;
+    height: 72px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+  }
+  .r-banner-btn a{
+    color: white;
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
 }

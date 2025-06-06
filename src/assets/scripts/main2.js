@@ -2,99 +2,15 @@
 // import Swiper from 'swiper';
 import Swiper from 'swiper/bundle';
 
+// import Swiper from '../styles/libs/swiper/swiper-bundle.js';
+// require('../styles/libs/swiper/swiper.js') ;
+
 import $ from 'jquery';
 import jQuery from 'jquery';
 
 // $('.swiper').css('display','none')
 
-const swiper = new Swiper('.swipergood', {
-    // modules: [Navigation, Pagination, Scrollbar],
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
 
-    autoplay: {
-        delay: 5000,
-    },
-    longSwipesRatio: 0.5,
-    pagination: {
-        clickable: true,
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-    navigation: {
-        nextEl: '.swiper2-button-next',
-        prevEl: '.swiper2-button-prev',
-    },
-    breakpoints: {
-
-        // 320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 0
-        // },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 0
-        },
-        1280: {
-            slidesPerView: 5,
-            spaceBetween: 0
-        }
-    },
-    // Navigation arrows
-    //     nextButton: '.swiper2-button-next',
-    //     prevButton: '.swiper2-button-prev',
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
-
-
-const swiperportfolio = new Swiper('.swiperportfolio', {
-    // modules: [Navigation, Pagination, Scrollbar],
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-
-    autoplay: {
-        delay: 5000,
-    },
-    longSwipesRatio: 0.5,
-    pagination: {
-        clickable: true,
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-    navigation: {
-        nextEl: '.swiper2-button-next',
-        prevEl: '.swiper2-button-prev',
-    },
-    breakpoints: {
-
-        // 320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 0
-        // },
-        // 768: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 0
-        // },
-        // 1280: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 0
-        // }
-    },
-    // Navigation arrows
-    //     nextButton: '.swiper2-button-next',
-    //     prevButton: '.swiper2-button-prev',
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
 
 
 
@@ -165,5 +81,111 @@ const swiperportfolio = new Swiper('.swiperportfolio', {
     };
 
     $('#more-nav').moreNav();
+
+})(jQuery);
+
+// const sw2=new Swiper(`.r-catalog__blockswiper-2`, {
+//     loop: true,
+//     slidesPerView: 4,
+//     spaceBetween: 10,
+//
+//     autoplay: {
+//         delay: 5000,
+//     },
+//     longSwipesRatio: 0.5,
+//     pagination: {
+//         clickable: true,
+//         el: `.swiper-pagination2`,
+//         type: 'bullets',
+//     }
+// });
+// const sw1=new Swiper(`.r-catalog__blockswiper-1`, {
+//     loop: true,
+//     slidesPerView: 4,
+//     spaceBetween: 10,
+//
+//     autoplay: {
+//         delay: 5000,
+//     },
+//     longSwipesRatio: 0.5,
+//     pagination: {
+//         clickable: true,
+//         el: `.swiper-pagination1`,
+//         type: 'bullets',
+//     }
+// });
+// const sw3=new Swiper(`.r-catalog__blockswiper-3`, {
+//     loop: true,
+//     slidesPerView: 4,
+//     spaceBetween: 10,
+//
+//     autoplay: {
+//         delay: 5000,
+//     },
+//     longSwipesRatio: 0.5,
+//     pagination: {
+//         clickable: true,
+//         el: `.swiper-pagination3`,
+//         type: 'bullets',
+//     }
+// });
+
+(function($) {
+    $(function () {
+        $('.r-catalog__blocks').on('click', '.r-catalog__block', function () {
+            $(this)
+                .addClass('r-catalog__block_active').siblings().removeClass('r-catalog__block_active');
+                let id=$(this).attr('id');
+                $('.r-catalog__contents .r-catalog__content').removeClass('r-catalog__content_active');
+                $(`.r-catalog__contents  .${id}`).addClass('r-catalog__content_active');
+        });
+    });
+
+
+    $(document).ready(
+        function (){
+            $('.r-catalog__blocks .r-catalog__block').each(function (ind){
+                // let swipernew=`swipernew${ind+1}`;
+                console.log(`.r-catalog__block-${ind + 1}`)
+                new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
+                     loop: true,
+                     slidesPerView: 4,
+                     spaceBetween: 10,
+
+                     autoplay: {
+                         delay: 5000,
+                     },
+                     longSwipesRatio: 0.5,
+                     pagination: {
+                         clickable: true,
+                         el: `.swiper-pagination${ind + 1}`,
+                         type: 'bullets',
+                     }
+                 });
+            })
+            $('.r-catalog__content').css('display','none');
+        }
+
+    )
+    $('.r-catalog__blocks .r-catalog__block').each(function (ind){
+        // let swipernew=`swipernew${ind+1}`;
+        console.log(`.r-catalog__block-${ind + 1}`)
+       // new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
+       //      loop: true,
+       //      slidesPerView: 4,
+       //      spaceBetween: 10,
+       //
+       //      autoplay: {
+       //          delay: 5000,
+       //      },
+       //      longSwipesRatio: 0.5,
+       //      pagination: {
+       //          clickable: true,
+       //          el: `.swiper-pagination${ind + 1}`,
+       //          type: 'bullets',
+       //      }
+       //  });
+    })
+
 
 })(jQuery);
