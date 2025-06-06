@@ -37,5 +37,30 @@
   .r-sells__block-img{
     display: flex;
     justify-content: center;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  @media #{$mobile-only-two} {
+    .r-sells__blocks{
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 1rem;
+    }
+    .r-sells__block{
+      gap: 1rem;
+    }
+    .r-sells__block-img{
+      img{
+        max-width: 50%;
+      }
+    }
+    .r-sells-text{
+      font-size: 12px;
+    }
+    .r-sells__block-title{
+      font-size: 18px;
+    }
   }
 }

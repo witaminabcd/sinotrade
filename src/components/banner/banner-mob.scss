@@ -1,0 +1,72 @@
+@media #{$tablet-all-only} {
+  .r-banner-title{
+    font-size: 48px;
+  }
+  .r-banner-subtitle{
+    font-size: 32px;
+  }
+  .r-banner-btn{
+    max-width: 250px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .r-banner-btn a {
+    font-size: 18px;
+  }
+}
+@media #{$mobile-only-two} {
+  .r-header-logo{
+    max-width:150px ;
+    img{
+      width: 150px;
+    }
+  }
+  .r-banner-wrap{
+    padding: 20px 0;
+    grid-template-columns: 100%;
+  }
+  .r-banner-title{
+    font-size: 32px;
+    color: white;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  }
+  .r-banner-subtitle{
+    font-size: 20px;
+    color: white;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  }
+  .r-banner-btn{
+    max-width: 200px;
+    height: 45px;
+    margin-top: 15px;
+    img{
+      height: 15px;
+    }
+  }
+  .r-banner-btn a {
+    font-size: 18px;
+  }
+  .r-banner-img{
+    //display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .r-header {
+    height: 50px;
+  }
+  .r-header-wrap {
+    height: 50px;
+  }
+  }

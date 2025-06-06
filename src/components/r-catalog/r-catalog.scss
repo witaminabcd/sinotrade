@@ -73,4 +73,13 @@
   .swiper-pagination-bullet-active{
     background-color:  $color-red-main;
   }
+  @media #{$mobile-only-two} {
+    .r-catalog__blocks{
+      flex-wrap: wrap;
+      .r-catalog__block{
+        font-size: 18px;
+      }
+    }
+
+  }
 }

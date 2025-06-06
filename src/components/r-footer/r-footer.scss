@@ -73,4 +73,25 @@
       color: #8B8B8B;
     }
   }
+  @media #{$mobile-only-two} {
+    .r-footer-wrap{
+      @include container();
+      padding: 25px 0 0 0;
+      border-top: 1px solid #FFFFFF40;
+      display:flex ;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+  .r-footer__menus{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a{
+      color: #8B8B8B;
+    }
+  }
+  .r-footer-sections{
+    flex-wrap: wrap;
+  }
 }

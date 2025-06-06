@@ -35,4 +35,15 @@
     letter-spacing: 0%;
 
   }
+  @media #{$mobile-only-two} {
+    .r-articles-title{
+      font-size: 30px;
+    }
+    .r-articles__blocks{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+    }
+  }
 }

@@ -100,12 +100,20 @@ import jQuery from 'jquery';
     $(document).ready(function () {
         $('.r-catalog__blocks .r-catalog__block').each(function (ind) {
             // let swipernew=`swipernew${ind+1}`;
-            console.log(`.r-catalog__block-${ind + 1}`)
             new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
                 loop: true,
-                slidesPerView: 4,
-                spaceBetween: 25,
-
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                    400: {
+                        slidesPerView: 2,
+                        spaceBetween: 15
+                    },
+                    1000: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                },
 
                 autoplay: {
                     delay: 5000,
@@ -123,19 +131,20 @@ import jQuery from 'jquery';
 
         const rItemsSlider = new Swiper(`.r-items-slider`, {
             loop: true,
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 25,
             breakpoints: {
 
-                320: {
+
+                480: {
                     slidesPerView: 2,
                     spaceBetween: 10
                 },
-                480: {
+                900: {
                     slidesPerView: 3,
                     spaceBetween: 10
                 },
-                1200: {
+                1297: {
                     slidesPerView: 4,
                     spaceBetween: 10
                 },
@@ -155,7 +164,22 @@ import jQuery from 'jquery';
                 type: 'bullets',
             }
         });
+        const rBannerSlider = new Swiper(`.r-banner-slider`, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 25,
 
+
+            autoplay: {
+                delay: 5000,
+            },
+            longSwipesRatio: 0.5,
+            pagination: {
+                clickable: true,
+                el: `.swiper-pagination-banner`,
+                type: 'bullets',
+            }
+        });
 
 
 

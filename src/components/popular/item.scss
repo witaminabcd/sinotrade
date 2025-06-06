@@ -68,4 +68,14 @@
 
     }
   }
+  @media #{$mobile-only-two} {
+    gap: 0.5rem;
+    .r-item-img{
+
+      img{
+        max-width: 70%;
+      }
+
+    }
+  }
 }

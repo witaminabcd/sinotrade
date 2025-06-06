@@ -28,5 +28,10 @@
       background-color: $color-red-main;
     }
     }
+@media #{$mobile-only-two} {
+   .r-popular-title{
+    font-size: 30px;
+  }
 
+}
 }
