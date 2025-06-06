@@ -1,0 +1,76 @@
+.r-footer{
+  background-color: black;
+  color: white;
+  @include padding-vertical-30();
+  ul{
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 0;
+    li{
+      margin: 15px 0;
+    }
+  }
+
+  .r-footer-wrap{
+    @include container();
+    padding: 50px 100px 0 0;
+    border-top: 1px solid #FFFFFF40;
+    display:flex ;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .r-footer__menus{
+    display: flex;
+    justify-content: space-between;
+    a{
+      color: #8B8B8B;
+    }
+  }
+  .r-footer-sections{
+    display: flex;
+    justify-content: space-between;
+    a{
+      font-family: Gilroy;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: white;
+
+    }
+    ul{
+      margin: 0;
+    }
+    li{
+      color:  #8B8B8B;
+      display: flex;
+      gap: 1rem;
+
+    }
+    .r-footer-section-social{
+      padding-top: 10px;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .r-footer-section-brend{
+    font-family: Gilroy;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B8B8B;
+    margin-top: 10px;
+  }
+  .r-footer-section-map{
+    margin-top: 10px;
+    a{
+      font-family: Gilroy;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #8B8B8B;
+    }
+  }
+}

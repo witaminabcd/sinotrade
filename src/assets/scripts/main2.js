@@ -84,51 +84,6 @@ import jQuery from 'jquery';
 
 })(jQuery);
 
-// const sw2=new Swiper(`.r-catalog__blockswiper-2`, {
-//     loop: true,
-//     slidesPerView: 4,
-//     spaceBetween: 10,
-//
-//     autoplay: {
-//         delay: 5000,
-//     },
-//     longSwipesRatio: 0.5,
-//     pagination: {
-//         clickable: true,
-//         el: `.swiper-pagination2`,
-//         type: 'bullets',
-//     }
-// });
-// const sw1=new Swiper(`.r-catalog__blockswiper-1`, {
-//     loop: true,
-//     slidesPerView: 4,
-//     spaceBetween: 10,
-//
-//     autoplay: {
-//         delay: 5000,
-//     },
-//     longSwipesRatio: 0.5,
-//     pagination: {
-//         clickable: true,
-//         el: `.swiper-pagination1`,
-//         type: 'bullets',
-//     }
-// });
-// const sw3=new Swiper(`.r-catalog__blockswiper-3`, {
-//     loop: true,
-//     slidesPerView: 4,
-//     spaceBetween: 10,
-//
-//     autoplay: {
-//         delay: 5000,
-//     },
-//     longSwipesRatio: 0.5,
-//     pagination: {
-//         clickable: true,
-//         el: `.swiper-pagination3`,
-//         type: 'bullets',
-//     }
-// });
 
 (function($) {
     $(function () {
@@ -168,9 +123,27 @@ import jQuery from 'jquery';
 
         const rItemsSlider = new Swiper(`.r-items-slider`, {
             loop: true,
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 25,
+            breakpoints: {
 
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            },
 
             autoplay: {
                 delay: 5000,

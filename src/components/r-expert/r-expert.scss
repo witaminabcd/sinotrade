@@ -1,0 +1,28 @@
+.r-expert{
+  @include padding-vertical-30();
+  .r-expert-wrap{
+    @include container();
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  .r-expert-title{
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+  .r-expert-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+  }
+  .r-expert-right{
+    img{
+      max-width: 100%;
+    }
+  }
+}

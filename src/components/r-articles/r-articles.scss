@@ -1,0 +1,38 @@
+.r-articles{
+  .r-articles-wrap{
+    @include container();
+    @include padding-vertical-30();
+  }
+  .r-articles-title{
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    @include padding-vertical-30();
+  }
+  .r-articles__blocks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+  }
+  .r-articles__block{
+    display: grid;
+    gap: 0.5rem;
+  }
+  .r-articles__block-img{
+    img{
+      width: 100%;
+    }
+  }
+  .r-articles__block-data{
+    font-family: Gilroy;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+}
