@@ -1,0 +1,41 @@
+.r-sells{
+  @include padding-vertical-30();
+  .r-sells-wrap{
+    @include container();
+
+  }
+  .r-sells__blocks{
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 1rem));
+    gap: 2rem;
+  }
+  .r-sells__block{
+    display: grid;
+    gap: 2rem;
+    background: linear-gradient(299.49deg, #DFDFDF 5.27%, #FAFAFA 93.09%);
+    padding: 45px 45px 0 45px;
+
+  }
+  .r-sells__block-title{
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+  .r-sells-text{
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+  .r-sells__block-img{
+    display: flex;
+    justify-content: center;
+  }
+}

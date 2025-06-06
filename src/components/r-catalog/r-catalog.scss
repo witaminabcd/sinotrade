@@ -1,11 +1,11 @@
 .r-catalog {
   @include padding-vertical-30();
-
   .r-catalog-wrap {
     @include container();
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     //$color-red-main
   }
 
@@ -57,6 +57,10 @@
       }
     }
 
+  }
+  .swiper-pagination{
+    bottom: auto;
+    padding-top: 30px;
   }
   .r-catalog__content_active{
     display: block!important;

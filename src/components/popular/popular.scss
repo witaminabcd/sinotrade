@@ -1,0 +1,32 @@
+.r-popular{
+  @include padding-vertical-30();
+  .r-popular-title{
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    @include padding-vertical-30();
+
+  }
+  .popular-wrap{
+    @include container();
+
+  }
+  @import "./item";
+  .r-items{
+    overflow: hidden;
+  }
+  .swiper-pagination-good{
+    text-align: center;
+   .swiper-pagination-bullet{
+     width: 24px;
+     height: 4px;
+   }
+    .swiper-pagination-bullet-active {
+      background-color: $color-red-main;
+    }
+    }
+
+}

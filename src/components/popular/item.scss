@@ -1,0 +1,68 @@
+.r-item{
+  display: grid;
+  gap: 1rem;
+  padding: 15px;
+  border: 1px solid #E5E5E5;
+  .r-item-img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
+  .r-item-title{
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+  .r-item-beetwen{
+    display: flex;
+    justify-content: space-between;
+
+    span{
+      font-family: Gilroy;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
+    }
+  }
+  .r-item-price-red{
+    color: $color-red-main;
+  }
+  .r-item__buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+  }
+  .r-item__button{
+    flex: 1 1 calc(50% - 0.5rem);
+    height:  37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-red-main;
+    border-radius: 10px;
+    a{
+      font-family: Gilroy;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $color-red-main;
+    }
+  }
+  .r-item__button-add{
+    background-color: $color-red-main;
+    display: flex;
+    gap: 1rem;
+    a{
+      color: white;
+
+    }
+  }
+}

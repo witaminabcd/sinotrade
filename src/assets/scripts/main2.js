@@ -142,50 +142,55 @@ import jQuery from 'jquery';
     });
 
 
-    $(document).ready(
-        function (){
-            $('.r-catalog__blocks .r-catalog__block').each(function (ind){
-                // let swipernew=`swipernew${ind+1}`;
-                console.log(`.r-catalog__block-${ind + 1}`)
-                new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
-                     loop: true,
-                     slidesPerView: 4,
-                     spaceBetween: 10,
+    $(document).ready(function () {
+        $('.r-catalog__blocks .r-catalog__block').each(function (ind) {
+            // let swipernew=`swipernew${ind+1}`;
+            console.log(`.r-catalog__block-${ind + 1}`)
+            new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
+                loop: true,
+                slidesPerView: 4,
+                spaceBetween: 25,
 
-                     autoplay: {
-                         delay: 5000,
-                     },
-                     longSwipesRatio: 0.5,
-                     pagination: {
-                         clickable: true,
-                         el: `.swiper-pagination${ind + 1}`,
-                         type: 'bullets',
-                     }
-                 });
-            })
-            $('.r-catalog__content').css('display','none');
-        }
 
-    )
-    $('.r-catalog__blocks .r-catalog__block').each(function (ind){
-        // let swipernew=`swipernew${ind+1}`;
-        console.log(`.r-catalog__block-${ind + 1}`)
-       // new Swiper(`.r-catalog__blockswiper-${ind + 1}`, {
-       //      loop: true,
-       //      slidesPerView: 4,
-       //      spaceBetween: 10,
-       //
-       //      autoplay: {
-       //          delay: 5000,
-       //      },
-       //      longSwipesRatio: 0.5,
-       //      pagination: {
-       //          clickable: true,
-       //          el: `.swiper-pagination${ind + 1}`,
-       //          type: 'bullets',
-       //      }
-       //  });
+                autoplay: {
+                    delay: 5000,
+                },
+                longSwipesRatio: 0.5,
+                pagination: {
+                    clickable: true,
+                    el: `.swiper-pagination${ind + 1}`,
+                    type: 'bullets',
+                }
+            });
+        })
+        $('.r-catalog__content').css('display', 'none');
+
+
+        const rItemsSlider = new Swiper(`.r-items-slider`, {
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 25,
+
+
+            autoplay: {
+                delay: 5000,
+            },
+            longSwipesRatio: 0.5,
+            pagination: {
+                clickable: true,
+                el: `.swiper-pagination-good`,
+                type: 'bullets',
+            }
+        });
+
+
+
+
+
     })
+
+
+
 
 
 })(jQuery);
